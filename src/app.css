@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--primary-color: #1a202c; /* light mode primary color */
+	--secondary-color: #718096; /* light mode secondary color */
+  }
+  
+  [data-theme="dark"] {
+	--primary-color: #f7fafc; /* dark mode primary color */
+	--secondary-color: #a0aec0; /* dark mode secondary color */
+  }
+  
+/* .input-primary {
+	@apply border w-full px-3 py-2 rounded-lg  focus-within:ring-2 focus-within:ring-offset-2;
+}
+
+label {
+	@apply cursor-pointer;
+}
+
+a {
+	@apply text-sky-600;
+}
+
+.notification:is(.not-read) {
+	@apply hover:bg-gray-50 bg-gray-100;
+}
+
+.field-group > label {
+	@apply inline-block mb-2;
+} */
