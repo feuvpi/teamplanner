@@ -12,8 +12,8 @@
 	let isDarkTheme = false;
 
 	const style = {
-		default: `flex flex-1 flex-col shadow-none h-screen fixed w-full lg:w-3/4 transition-all duration-200 ease-in-out`,
-		close: `ml-16`,
+		default: `flex flex-col shadow-none h-screen w-screen transition-all duration-200 ease-in-out`,
+		close: `ml-24`,
 		open: `ml-64`
 	};
 
