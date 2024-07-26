@@ -3,7 +3,7 @@
 	import { clickoutside } from '@svelte-put/clickoutside';
 	import ButtonDropdown from '../ButtonDropdown.svelte';
 	// import type { Link } from '$lib/data/links';
-	import { openSidebar } from '$lib/store';
+	import { openSidebar, sidebarOpen } from '$lib/store';
 	import profile from '$lib/public/9.jpg';
 
 	interface DashboardHeaderProps {
@@ -85,7 +85,7 @@
 	class="z-10 border-gray-200 bg-white py-4 px-4 dark:border-gray-700 dark:bg-gray-800 shadow-md dark:shadow-none"
 >
 	<div
-		class="dark:text-dark-text container mx-auto flex h-full items-center justify-between text-orange-600 dark:text-orange-300"
+		class="dark:text-dark-text container flex h-full items-center justify-between text-orange-600 dark:text-orange-300"
 	>
 		<!-- Mobile hamburger -->
 
@@ -96,7 +96,24 @@
 			on:click={openSidebar}
 			class="text-4xl pr-4 focus:outline-none lg:visible text-light-text dark:text-dark-textbar"
 		>
-			&#8801;
+			<svg
+				class="w-4 h-4 text-gray-600"
+				class:is-open={$sidebarOpen}
+				class:transform={$sidebarOpen}
+				class:transition-transform={$sidebarOpen}
+				class:rotate-180={$sidebarOpen}
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke="currentColor"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					d="M13 5l7 7-7 7M5 5l7 7-7 7"
+				/>
+			</svg>
 		</button>
 
 		<button
@@ -115,8 +132,8 @@
 		</button>
 		<!-- Search input -->
 		<!-- <div class="flex flex-1 justify-center lg:mr-32"> -->
-		<div class="flex flex-1 justify-center">
-			<!-- <div class="relative mr-6 w-full max-w-xl focus-within:text-purple-500"> -->
+		<!-- <div class="flex flex-1 justify-center">
+
 			<div class="relative mr-6 w-full">
 				<div class="absolute inset-y-0 flex items-center pl-2">
 					<svg
@@ -139,7 +156,7 @@
 					aria-label="Procurar..."
 				/>
 			</div>
-		</div>
+		</div> -->
 		<ul class="flex flex-shrink-0 items-center space-x-6">
 			<!-- Theme toggler -->
 			<li class="flex text-orange-500 dark:text-dark-text">
