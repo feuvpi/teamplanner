@@ -91,7 +91,7 @@
 			}}
 		/>
 		<main
-			class="bg-light-background mr-4 shadow-md dark:text-dark-text dark:shadow-none dark:bg-gray-700 rounded-xl m-4 text-light-text h-full"
+			class=" dark:text-dark-text dark:shadow-none border-2 m-2 dark:bg-gray-700 rounded-xl text-light-text"
 		>
 			<slot />
 		</main>
