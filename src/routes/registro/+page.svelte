@@ -6,7 +6,7 @@
 
 <div class="bg-gray-200 min-h-screen flex flex-col justify-center py-2 sm:px-6 lg:px-8 px-6">
 	<div class="sm:mx-auto sm:w-full sm:max-w-md">
-		<div class="self-center mx-auto my-ayto flex bg-orange-500 shadow-lg w-fit p-2 rounded-lg">
+		<div class="self-center mx-auto my-auto flex bg-orange-500 shadow-lg w-fit p-2 rounded-lg">
 			<svg
 				class="h-16"
 				viewBox="0 0 24 24"
@@ -14,7 +14,6 @@
 				xmlns="http://www.w3.org/2000/svg"
 				xmlns:xlink="http://www.w3.org/1999/xlink"
 			>
-				<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
 				<g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 					<g id="ic_fluent_board_24_filled" fill="#212121" fill-rule="nonzero">
 						<path
@@ -27,14 +26,14 @@
 		</div>
 
 		<h2 class="mt-6 text-center text-3xl leading-9 font-extrabold text-gray-900">
-			Acesse sua conta
+			Criar uma nova conta
 		</h2>
 		<p class="mt-2 text-center text-sm leading-5 text-orange-500 max-w">
 			<a
-				href="/registro"
+				href="/login"
 				class="font-medium text-orange-500 hover:text-orange-400 focus:outline-none focus:underline transition ease-in-out duration-150"
 			>
-				Não possui conta? Criar uma agora.
+				Já possui uma conta? Fazer login.
 			</a>
 		</p>
 	</div>
@@ -42,64 +41,52 @@
 	<div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
 		<div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
 			<form method="POST">
-				<label for="email" class="block text-sm font-medium leading-5 text-gray-700"
-					>Endereço de E-mail
+				<label for="name" class="block text-sm font-medium leading-5 text-gray-700">
+					Nome
+					<input
+						name="name"
+						placeholder="Nome completo"
+						type="text"
+						class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+					/>
+				</label>
+
+				<label for="email" class="block text-sm font-medium leading-5 text-gray-700 mt-4">
+					Endereço de E-mail
 					<input
 						name="email"
 						placeholder="E-mail"
 						type="email"
 						class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
 					/>
-					<div class="hidden absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-						<svg class="h-5 w-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
-							<path
-								fill-rule="evenodd"
-								d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
-								clip-rule="evenodd"
-							/>
-						</svg>
-					</div>
 				</label>
-				<label for="password" class="block text-sm font-medium leading-5 text-gray-700 mt-4"
-					>Senha
-					<div class="mt-1 rounded-md shadow-sm">
-						<input
-							placeholder="Senha"
-							name="password"
-							type="password"
-							class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-						/>
-					</div>
-				</label>
-				<div class="mt-6 flex items-center justify-between">
-					<div class="flex items-center">
-						<input
-							name="remember"
-							type="checkbox"
-							value="1"
-							class="form-checkbox h-4 w-4 text-orange-600 transition duration-150 ease-in-out"
-						/>
-						<label for="remember_me" class="ml-2 block text-sm leading-5 text-gray-900"
-							>Lembrar-me</label
-						>
-					</div>
 
-					<div class="text-sm leading-5">
-						<a
-							href="#"
-							class="font-medium text-orange-500 hover:text-orange-500 focus:outline-none focus:underline transition ease-in-out duration-150"
-						>
-							Esqueceu sua senha?
-						</a>
-					</div>
-				</div>
+				<label for="password" class="block text-sm font-medium leading-5 text-gray-700 mt-4">
+					Senha
+					<input
+						placeholder="Senha"
+						name="password"
+						type="password"
+						class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+					/>
+				</label>
+
+				<label for="password" class="block text-sm font-medium leading-5 text-gray-700 mt-4">
+					Confirmar Senha
+					<input
+						placeholder="Senha"
+						name="password"
+						type="password"
+						class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+					/>
+				</label>
 
 				<div class="mt-6">
 					<span class="block w-full rounded-md shadow-sm">
 						<button
 							class="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-orange-500 hover:bg-orange-400 focus:outline-none focus:border-orange-700 focus:shadow-outline-indigo active:bg-orange-700 transition duration-150 ease-in-out"
 						>
-							Entrar
+							Criar conta
 						</button>
 					</span>
 				</div>
