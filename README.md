@@ -39,3 +39,5 @@ https://airmill-dashboard.vercel.app
 MIT
 
 Maintained by Sony Arianto Kurniawan <<sony@sony-ak.com>> and contributors.
+
+https://www.youtube.com/watch?v=doDKaKDvB30
