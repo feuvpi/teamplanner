@@ -1,15 +1,22 @@
 <script lang="ts">
 	import { clickoutside } from '@svelte-put/clickoutside';
-	// import type { Link } from '$lib/data/links';
+	import type { Link } from '$lib/interfaces/link';
 	import Icon from '@iconify/svelte';
-	// import { pb, logout } from '$lib/data/pocketbase';
-	import { goto } from '$app/navigation';
 
 	export let isOpen = true,
 		links: Link[] = [];
 
-	async function handleLogout() {
-		logout();
+	async function logout() {
+		const response = await fetch('/logout', {
+			method: 'GET'
+		});
+		if (response.ok) {
+			// Redirect to login page
+			window.location.href = '/login';
+		} else {
+			// Handle error
+			console.error('Logout failed');
+		}
 	}
 </script>
 
@@ -46,7 +53,7 @@
 			{/each}
 			<li class="border-t mt-2 pt-3">
 				<form method="POST">
-					<button type="button" class="btn btn-error w-full rounded-full" on:click={handleLogout}>
+					<button type="button" class="btn btn-error w-full rounded-full" on:click={logout}>
 						Logout
 						<Icon icon="solar:logout-linear" class="ml-1 text-2xl" />
 					</button>

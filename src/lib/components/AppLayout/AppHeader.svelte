@@ -2,7 +2,7 @@
 	import { fade } from 'svelte/transition';
 	import { clickoutside } from '@svelte-put/clickoutside';
 	import ButtonDropdown from '../ButtonDropdown.svelte';
-	// import type { Link } from '$lib/data/links';
+	import type { Link } from '$lib/interfaces/link';
 	import { openSidebar, sidebarOpen } from '$lib/store';
 	import profile from '$lib/public/9.jpg';
 
@@ -13,24 +13,24 @@
 		isProfileMenuOpen: boolean;
 	}
 
-	// const links: Link[] = [
-	// 	{
-	// 		name: 'Profile',
-	// 		path: '/profile',
-	// 		icon: {
-	// 			inactive: 'bx:user',
-	// 			active: 'bxs:user'
-	// 		}
-	// 	},
-	// 	{
-	// 		name: 'Settings',
-	// 		path: '/settings',
-	// 		icon: {
-	// 			inactive: 'basil:settings-outline',
-	// 			active: 'basil:settings'
-	// 		}
-	// 	}
-	// ];
+	const links: Link[] = [
+		{
+			name: 'Profile',
+			path: '/profile',
+			icon: {
+				inactive: 'bx:user',
+				active: 'bxs:user'
+			}
+		},
+		{
+			name: 'Settings',
+			path: '/settings',
+			icon: {
+				inactive: 'basil:settings-outline',
+				active: 'basil:settings'
+			}
+		}
+	];
 
 	export let props: DashboardHeaderProps;
 	export let isSideMenuOpen: boolean;
@@ -253,9 +253,9 @@
 			</li>
 			<!-- Profile menu -->
 
-			<!-- <ButtonDropdown on:click={() => handleState('dropdown')} {links} bind:isOpen={isOpenDropdown}>
+			<ButtonDropdown on:click={() => handleState('dropdown')} {links} bind:isOpen={isOpenDropdown}>
 				<img src={profile} class="w-6" alt="Username" />
-			</ButtonDropdown> -->
+			</ButtonDropdown>
 		</ul>
 	</div>
 </header>
