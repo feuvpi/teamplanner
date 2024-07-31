@@ -1,7 +1,11 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 
-	export let data: PageData;
+	/** @type {import('./$types').ActionData} */
+	export let form;
+
+	/** @type {import('./$types').PageData} */
+	export let data;
 </script>
 
 <div class="bg-gray-200 min-h-screen flex flex-col justify-center py-2 sm:px-6 lg:px-8 px-6">
@@ -104,6 +108,11 @@
 					</span>
 				</div>
 			</form>
+			{#if form != undefined && !form?.success}
+				<p class="flex justify-center text-center my-auto pt-4 text-sm text-red-500">
+					Credenciais invalidas!
+				</p>
+			{/if}
 		</div>
 	</div>
 </div>
