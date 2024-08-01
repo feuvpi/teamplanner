@@ -7,7 +7,10 @@ export const load = (({ locals }) => {
     }
 }) satisfies PageServerLoad;
 
-
+// Type guard to check if the error is an authentication error
+function isAuthError(error: unknown): error is { status: number } {
+  return typeof error === 'object' && error !== null && 'status' in error;
+}
 
 /** @type {import('./$types').Actions} */
 export const actions = {
@@ -18,10 +21,11 @@ export const actions = {
       try {
         const { token, record } = await locals.pb.collection('users').authWithPassword(email, password);
         if (token) {
+          locals.user = locals.pb.authStore.model
           throw redirect(303, '/app');
         }
       } catch (error) {
-        if (error.status === 400) {
+        if (isAuthError(error)) {
           return {
             error: 'Invalid email or password',
           };

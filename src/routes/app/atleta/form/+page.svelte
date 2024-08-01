@@ -36,7 +36,7 @@
 	}
 
 	export let data: PageData;
-	let profileImage: string = '';
+	export let profileImage: string = '';
 
 	function formatDate(date: Date): string {
 		if (date instanceof Date && !isNaN(date.getTime())) {
@@ -47,10 +47,12 @@
 </script>
 
 <PageTitle name={'Adicionar Novo Atleta'} />
-<form method="post" class="bg-white max-w-xl mx-auto my-auto p-4 rounded-md shadow-lg" on:submit|preventDefault={handleSubmit} >
-
+<form
+	method="post"
+	class="bg-white l max-w-5xl mx-auto p-8 rounded-md shadow-lg"
+	on:submit|preventDefault={handleSubmit}
+>
 	<ProfilePicture bind:image={profileImage} />
-
 
 	<div class="mb-4">
 		<label for="nome" class="block font-extrabold text-black">Nome</label>
@@ -125,7 +127,6 @@
 		>
 	</div>
 </form>
-
 
 <!-- <div x-show.transition.in="step === 1">
 	<div class="mb-5 text-center">

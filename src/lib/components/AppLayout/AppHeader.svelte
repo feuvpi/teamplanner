@@ -82,7 +82,7 @@
 </script>
 
 <header
-	class="z-10 border-gray-200 bg-white py-4 px-4 dark:border-gray-700 dark:bg-gray-800 shadow-md dark:shadow-none"
+	class="z-10 border-gray-200 bg-white py-4 px-4 dark:border-gray-700 dark:bg-gray-800 shadow-md dark:shadow-none top-0 w-full min-w-max"
 >
 	<div
 		class="dark:text-dark-text container flex h-full items-center justify-between text-orange-600 dark:text-orange-300"

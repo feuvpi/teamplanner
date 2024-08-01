@@ -12,7 +12,7 @@
 	let isDarkTheme = false;
 
 	const style = {
-		default: `flex flex-col shadow-none h-screen w-screen transition-all duration-200 ease-in-out`,
+		default: `flex flex-col shadow-none w-screen transition-all duration-200 ease-in-out`,
 		close: `ml-24`,
 		open: `ml-64`
 	};
@@ -59,42 +59,29 @@
 
 <svelte:head>
 	<script>
-		// 	function getThemeFromLocalStorage() {
-		// 		if (window.localStorage.getItem('isDarkTheme')) {
-		// 			return JSON.parse(window.localStorage.getItem('isDarkTheme'));
-		// 		}
-
-		// 		return !!window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-		// 	}
-
-		// 	if (getThemeFromLocalStorage()) {
-		// 		document.documentElement.classList.add('dark');
-		// 	} else {
-		// 		document.documentElement.classList.remove('dark');
-		// 	}
-		//
 	</script>
 </svelte:head>
-
-<div class="flex h-screen dark:bg-dark-background bg-gray-200 overflow-hidden w-screen">
-	<!-- <Overlay /> -->
-	<Sidebar mobileOrientation="end" />
-
+<!-- <Overlay /> -->
+<Sidebar mobileOrientation="end" />
+<div class="flex w-screen h-screen dark:bg-dark-background bg-gray-200">
 	<div class={`${style.default} ${$sidebarOpen ? style.open : style.close}`}>
-		<AppHeader
-			bind:isSideMenuOpen
-			props={{
-				toggleTheme: toggleTheme,
-				isDarkTheme: isDarkTheme,
-				isNotificationsMenuOpen: isNotificationsMenuOpen,
-				isProfileMenuOpen: isProfileMenuOpen
-			}}
-		/>
-		<main
-			class=" dark:text-dark-text dark:shadow-none border-2 m-2 dark:bg-gray-700 rounded-xl text-light-text"
+		<div class="">
+			<AppHeader
+				bind:isSideMenuOpen
+				props={{
+					toggleTheme: toggleTheme,
+					isDarkTheme: isDarkTheme,
+					isNotificationsMenuOpen: isNotificationsMenuOpen,
+					isProfileMenuOpen: isProfileMenuOpen
+				}}
+			/>
+		</div>
+
+		<section
+			class="flex-1 overflow-y-auto relative dark:text-dark-text section main-section dark:shadow-none dark:bg-gray-700 rounded-xl text-light-text"
 		>
 			<slot />
-		</main>
+		</section>
 	</div>
 </div>
 
