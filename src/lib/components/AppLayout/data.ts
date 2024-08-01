@@ -4,7 +4,7 @@ import MediasIcon from './icons/MediasIcon.svelte';
 
 export const data = [
 	{
-		title: 'Resumo',
+		title: 'Resumo2',
 		icon: HomeIcon,
 		link: '/app'
 	},

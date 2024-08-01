@@ -94,10 +94,10 @@
 			aria-expanded="false"
 			aria-label="Toggle sidenav"
 			on:click={openSidebar}
-			class="text-4xl pr-4 focus:outline-none lg:visible text-light-text dark:text-dark-textbar"
+			class="text-4xl pr-4 focus:outline-none lg:visible"
 		>
 			<svg
-				class="w-4 h-4 text-gray-600"
+				class="w-4 h-4 text-gray-600 dark:text-white"
 				class:is-open={$sidebarOpen}
 				class:transform={$sidebarOpen}
 				class:transition-transform={$sidebarOpen}

@@ -29,7 +29,7 @@
 </script>
 
 <aside
-	class="z-20 shadow-lg fixed top-0 left-0 h-full hidden w-64 flex-shrink-0 border-r-[1px] border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800 md:block"
+	class="z-20 shadow-lg fixed top-0 left-0 h-full hidden w-64 flex-shrink-0 border-r-[1px] border-gray-200 bg-cyan-500 dark:border-gray-700 dark:bg-gray-800 md:block"
 >
 	<div class="py-4 content-center">
 		<!-- svelte-ignore a11y-invalid-attribute -->
