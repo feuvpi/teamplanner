@@ -7,6 +7,8 @@
 		links: Link[] = [];
 
 	async function logout() {
+		console.log('uhul');
+
 		const response = await fetch('/logout', {
 			method: 'GET'
 		});
@@ -20,19 +22,20 @@
 	}
 </script>
 
-<div class="relative">
+<div class="relative text-black">
 	<button type="button" on:click|stopPropagation>
 		<slot />
 	</button>
 	<div
 		use:clickoutside
-		on:clickoutside={() => (isOpen = false)}
 		id="dropdown"
-		class="absolute {isOpen ? '' : 'hidden'} right-0 shadow-md bg-white p-4 w-64 rounded-xl"
+		class="absolute {isOpen
+			? ''
+			: 'hidden'} right-0 border-2 z-50 shadow-md bg-white p-4 w-64 rounded-xl"
 	>
 		<div class="flex items-start gap-3 border-b pb-3 mb-3">
 			<img
-				src="/images/profile-1.jpg"
+				src="/favicon.png"
 				class="w-14 h-14 aspect-square rounded-full border border-gray-300"
 				alt="Username"
 			/>
@@ -53,7 +56,11 @@
 			{/each}
 			<li class="border-t mt-2 pt-3">
 				<form method="POST">
-					<button type="button" class="btn btn-error w-full rounded-full" on:click={logout}>
+					<button
+						type="button"
+						class="w-full bg-red-500/60 cursor-pointer hover:bg-red-600/60 rounded-md place-content-center align-middle flex"
+						on:click={logout}
+					>
 						Logout
 						<Icon icon="solar:logout-linear" class="ml-1 text-2xl" />
 					</button>
