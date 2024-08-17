@@ -82,7 +82,7 @@
 </script>
 
 <header
-	class="z-10 border-gray-200 bg-white py-4 px-4 dark:border-gray-700 dark:bg-gray-800 shadow-md dark:shadow-none top-0 w-full min-w-max"
+	class="z-10 border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800 shadow-md dark:shadow-none top-0 w-full min-w-max"
 >
 	<div
 		class="dark:text-dark-text container flex h-full items-center justify-between text-orange-600 dark:text-orange-300"
@@ -116,7 +116,7 @@
 			</svg>
 		</button>
 
-		<button
+		<!-- <button
 			type="button"
 			class="mr-5 -ml-1 rounded-md p-1 focus:outline-none focus:ring-[3px] focus:ring-orange-200 dark:focus:ring-gray-500 md:hidden"
 			on:click={() => (isSideMenuOpen = !isSideMenuOpen)}
@@ -129,7 +129,7 @@
 					clip-rule="evenodd"
 				/>
 			</svg>
-		</button>
+		</button> -->
 		<!-- Search input -->
 		<!-- <div class="flex flex-1 justify-center lg:mr-32"> -->
 		<!-- <div class="flex flex-1 justify-center">

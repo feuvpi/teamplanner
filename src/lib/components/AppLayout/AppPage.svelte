@@ -13,8 +13,8 @@
 
 	const style = {
 		default: `flex flex-col shadow-none w-screen transition-all duration-200 ease-in-out`,
-		close: `ml-24`,
-		open: `ml-64`
+		close: `lg:ml-24`,
+		open: `lg:ml-64`
 	};
 
 	function getThemeFromLocalStorage() {

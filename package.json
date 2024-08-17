@@ -13,6 +13,9 @@
 		"format": "prettier --write --plugin prettier-plugin-svelte ."
 	},
 	"devDependencies": {
+		"@event-calendar/core": "^3.4.0",
+		"@event-calendar/list": "^3.4.0",
+		"@event-calendar/time-grid": "^3.4.0",
 		"@iconify/svelte": "^4.0.2",
 		"@svelte-put/clickoutside": "^3.0.1",
 		"@sveltejs/adapter-auto": "^2.1.1",

@@ -4,6 +4,14 @@
 
 	export let data: PageData;
 
+	// let plugins = [TimeGrid, List];
+	// let options = {
+	// 	view: 'timeGridWeek',
+	// 	events: [
+	// 		// your list of events
+	// 	]
+	// };
+
 	class Time {
 		Descricao: string;
 

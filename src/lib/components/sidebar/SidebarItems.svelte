@@ -5,8 +5,8 @@
 
 	const style = {
 		title: ` mx-4 text-sm whitespace-pre dark:text-dark-text`,
-		active: `bg-white hover:bg-white text-black dark:bg-neutral-600 rounded-md mr-2`,
-		link: `flex items-center hover:bg-neutral-200/50 rounded-md mr-2 justify-start my-1 p-3 whitespace-pre`,
+		active: `bg-white hover:bg-white text-black dark:bg-neutral-600 rounded-md m-2`,
+		link: `flex items-center hover:bg-neutral-200/50 rounded-md m-2 justify-start my-1 p-3 whitespace-pre`,
 		close: `lg:duration-75 lg:ease-out lg:invisible lg:opacity-0 lg:transform lg:-translate-x-full`,
 		open: `lg:duration-100 lg:ease-in lg:h-auto lg:opacity-100 lg:transition-all lg:w-auto`
 	};
