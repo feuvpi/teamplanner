@@ -63,7 +63,7 @@
 </svelte:head>
 <Overlay />
 <Sidebar mobileOrientation="end" />
-<div class="flex w-screen h-screen dark:bg-dark-background bg-gray-200">
+<div class="flex w-screen z-10 h-screen dark:bg-dark-background bg-gray-200">
 	<div class={`${style.default} ${$sidebarOpen ? style.open : style.close}`}>
 		<div class="">
 			<AppHeader
@@ -95,6 +95,12 @@
 		margin-left: 90px;
 		/* adjust this value based on your sidebar width */
 		transition: margin-left 1.5s ease;
+	}
+
+	.sidebar {
+		z-index: 30; /* Ensures it stays above the main content */
+		box-shadow: 2px 0 8px rgba(0, 0, 0, 0.25); /* Adds shadow */
+		transition: box-shadow 0.3s ease;
 	}
 
 	/* .main-content {

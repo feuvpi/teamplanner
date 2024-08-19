@@ -12,7 +12,7 @@
 		container: `pb-32 lg:pb-12`,
 		close: ` absolute duration-200 hidden transition-all lg:w-24`,
 		open: `absolute duration-200 z-50  transition-all w-8/12 z-40 sm:w-5/12 md:w-64`,
-		default: `z-50 shadow-xl bg-sky-700/70  dark:bg-dark-background dark:text-dark-text h-screen overflow-y-auto text-white top-0 lg:block fixed rounded-none ease-in-out  transition-all`
+		default: `sidebar z-50 shadow-xl bg-sky-700/70  dark:bg-dark-background dark:text-dark-text h-screen overflow-y-auto text-white top-0 lg:block fixed rounded-none ease-in-out  transition-all`
 	};
 
 	export let mobileOrientation: 'start' | 'end' = 'end';
