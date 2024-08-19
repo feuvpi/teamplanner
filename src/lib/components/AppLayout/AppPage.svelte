@@ -61,7 +61,7 @@
 	<script>
 	</script>
 </svelte:head>
-<!-- <Overlay /> -->
+<Overlay />
 <Sidebar mobileOrientation="end" />
 <div class="flex w-screen h-screen dark:bg-dark-background bg-gray-200">
 	<div class={`${style.default} ${$sidebarOpen ? style.open : style.close}`}>

@@ -90,6 +90,7 @@
 		<!-- Mobile hamburger -->
 
 		<button
+			id="sidebar-button"
 			type="button"
 			aria-expanded="false"
 			aria-label="Toggle sidenav"

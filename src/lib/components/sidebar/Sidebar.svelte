@@ -1,7 +1,8 @@
 <script lang="ts">
-	import { sidebarOpen } from '$lib/store';
+	import { sidebarOpen, closeSidebar } from '$lib/store';
 	import SidebarItems from './SidebarItems.svelte';
 	import SidebarHeader from './SidebarHeader.svelte';
+	import { clickoutside } from '@svelte-put/clickoutside';
 
 	const style = {
 		mobileOrientation: {
@@ -15,6 +16,20 @@
 	};
 
 	export let mobileOrientation: 'start' | 'end' = 'end';
+
+	function handleOutsideClick(e: CustomEvent<MouseEvent>) {
+		if (
+			window.innerWidth < 768 &&
+			sidebarOpen &&
+			e.target !== document.getElementById('sidebar-button')
+		) {
+			// 768px is a common breakpoint for mobile screens
+
+			closeSidebar();
+			console.log(document.getElementById('sidebar-button'));
+			console.log(e);
+		}
+	}
 </script>
 
 <aside
