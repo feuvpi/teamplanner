@@ -78,7 +78,7 @@
 		</div>
 
 		<section
-			class="flex-1 overflow-y-auto relative dark:text-dark-text section main-section dark:shadow-none dark:bg-gray-700 rounded-xl text-light-text"
+			class="flex-1 overflow-y-auto relative dark:text-dark-text section main-section dark:shadow-none dark:bg-gray-700 md:rounded-xl text-light-text"
 		>
 			<slot />
 		</section>
